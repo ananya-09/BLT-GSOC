@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-13T15:31:14.029Z",
+    "updatedAt": "2026-05-14T03:29:26.219Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -7,8 +7,8 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-NetGuardian"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 4,
+                "openPR": 12,
+                "mergedPR": 17,
                 "openIssues": 0,
                 "closedIssues": 3,
                 "totalCommits": 82
@@ -25,16 +25,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-University"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 0,
-                "openIssues": 0,
-                "closedIssues": 0,
+                "openPR": 6,
+                "mergedPR": 20,
+                "openIssues": 3,
+                "closedIssues": 12,
                 "totalCommits": 86
             },
             "userStats": {
                 "e-esakman": {
-                    "prTotal": 0,
-                    "closedIssues": 0
+                    "prTotal": 2,
+                    "closedIssues": 3
                 }
             }
         },
@@ -43,16 +43,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 0,
-                "openIssues": 0,
-                "closedIssues": 0,
+                "openPR": 34,
+                "mergedPR": 35,
+                "openIssues": 40,
+                "closedIssues": 28,
                 "totalCommits": 138
             },
             "userStats": {
                 "mdkaifansari04": {
-                    "prTotal": 0,
-                    "closedIssues": 0
+                    "prTotal": 2,
+                    "closedIssues": 1
                 }
             }
         },
@@ -116,15 +116,15 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-MCP"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 0,
-                "openIssues": 0,
-                "closedIssues": 0,
+                "openPR": 18,
+                "mergedPR": 8,
+                "openIssues": 5,
+                "closedIssues": 1,
                 "totalCommits": 24
             },
             "userStats": {
                 "Nachiket-Roy": {
-                    "prTotal": 0,
+                    "prTotal": 1,
                     "closedIssues": 0
                 }
             }
