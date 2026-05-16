@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-15T06:04:16.811Z",
+    "updatedAt": "2026-05-16T05:35:02.838Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -70,8 +70,8 @@ window.GSOC2026_STATS = {
             },
             "userStats": {
                 "ananya-09": {
-                    "prTotal": 0,
-                    "closedIssues": 0
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
@@ -120,12 +120,12 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 24
+                "totalCommits": 29
             },
             "userStats": {
                 "Nachiket-Roy": {
                     "prTotal": null,
-                    "closedIssues": 0
+                    "closedIssues": null
                 }
             }
         },
