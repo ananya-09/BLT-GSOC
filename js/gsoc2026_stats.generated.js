@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-17T03:29:29.105Z",
+    "updatedAt": "2026-05-18T03:29:54.915Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -124,8 +124,8 @@ window.GSOC2026_STATS = {
             },
             "userStats": {
                 "Nachiket-Roy": {
-                    "prTotal": 2,
-                    "closedIssues": 0
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
