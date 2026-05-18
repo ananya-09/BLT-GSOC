@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-17T05:56:33.472Z",
+    "updatedAt": "2026-05-18T06:33:49.984Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -62,16 +62,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Vanish-Flutter"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
+                "openPR": 2,
+                "mergedPR": 6,
+                "openIssues": 1,
                 "closedIssues": 3,
                 "totalCommits": 26
             },
             "userStats": {
                 "ananya-09": {
-                    "prTotal": null,
-                    "closedIssues": null
+                    "prTotal": 0,
+                    "closedIssues": 0
                 }
             }
         },
@@ -80,10 +80,10 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Preflight"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
+                "openPR": 5,
+                "mergedPR": 7,
+                "openIssues": 4,
+                "closedIssues": 3,
                 "totalCommits": 25
             },
             "userStats": {
