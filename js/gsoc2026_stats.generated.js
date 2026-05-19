@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-18T06:33:49.984Z",
+    "updatedAt": "2026-05-19T06:20:16.224Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -70,8 +70,8 @@ window.GSOC2026_STATS = {
             },
             "userStats": {
                 "ananya-09": {
-                    "prTotal": 0,
-                    "closedIssues": 0
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
@@ -80,10 +80,10 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Preflight"
             ],
             "repoStats": {
-                "openPR": 5,
-                "mergedPR": 7,
-                "openIssues": 4,
-                "closedIssues": 3,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": 25
             },
             "userStats": {
