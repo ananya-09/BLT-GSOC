@@ -69,6 +69,7 @@ a {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-width: 0;
     overflow: hidden;
     border-color: #e6e8ec;
     background: linear-gradient(180deg, #ffffff 0%, #fcfcfd 100%);
@@ -108,6 +109,7 @@ a {
 #intern-cards > article > div:has(> h3) {
     order: 2;
     display: block;
+    min-width: 0;
 }
 
 #gsoc-student-cards > article > p,
@@ -115,28 +117,31 @@ a {
     order: 3;
     display: -webkit-box;
     -webkit-line-clamp: 5;
+    line-clamp: 5;
     -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 #gsoc-student-cards > article > div:has(> p > i.fa-solid.fa-microchip),
 #intern-cards > article > div:has(> p > i.fa-solid.fa-microchip) {
     order: 4;
     margin-top: auto;
+    min-width: 0;
 }
 
 #gsoc-student-cards > article > div:has(> p > i.fa-solid.fa-microchip) > p:last-child,
-#intern-cards > article > div:has(> p > i.fa-solid.fa-microchip) > p:last-child {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+#intern-cards > article > div:has(> p > i.fa-solid.fa-microchip) > p:last-child,
+#gsoc-student-cards > article .project-summary,
+#intern-cards > article .project-summary,
+#gsoc-student-cards > article .project-description,
+#intern-cards > article .project-description,
+#gsoc-student-cards > article .card-tagline,
+#intern-cards > article .card-tagline {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .card-tagline {
     margin-top: 0.25rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 #gsoc-student-cards > article > div:has(> p > i.fa-solid.fa-chalkboard-user),
@@ -160,6 +165,7 @@ a {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    min-width: 0;
 }
 
 .person-avatar {
@@ -260,6 +266,39 @@ a {
 
 .dark .project-stat-label {
     color: #9ca3af;
+}
+
+#gsoc-student-cards .project-summary,
+#intern-cards .project-summary,
+#gsoc-student-cards .mb-3,
+#intern-cards .mb-3,
+#gsoc-student-cards .mb-4,
+#intern-cards .mb-4 {
+    min-width: 0;
+}
+
+#gsoc-student-cards .project-description,
+#intern-cards .project-description,
+#gsoc-student-cards .text-xs,
+#intern-cards .text-xs {
+    max-width: 100%;
+}
+
+@media (max-width: 1023px) {
+    #desktop-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    #desktop-nav {
+        display: flex;
+    }
+
+    #mobile-nav-toggle,
+    #mobile-nav {
+        display: none;
+    }
 }
 
 .dark .project-stat-value {
@@ -370,6 +409,47 @@ a {
     background: #6b7280;
 }
 
+/* Global box-sizing to prevent overflow calculations from misbehaving */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Ensure inline elements inside cards wrap instead of expanding the card width */
+#gsoc-student-cards a,
+#intern-cards a,
+#gsoc-student-cards .person-github,
+#intern-cards .person-github,
+#gsoc-student-cards .project-description,
+#intern-cards .project-description,
+#gsoc-student-cards .text-xs,
+#intern-cards .text-xs,
+#gsoc-student-cards code,
+#intern-cards code {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    max-width: 100%;
+}
+
+/* Prevent images from forcing card width */
+#gsoc-student-cards img,
+#intern-cards img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make sure project-summary toggles don't push layout */
+.project-summary {
+    display: block;
+    min-width: 0;
+}
+
+/* Limit long inline tags/pills to wrap safely */
+.project-stat-pills,
+.person-row {
+    min-width: 0;
+}
+
 /* Firefox support */
 * {
     scrollbar-width: thin;
@@ -404,6 +484,88 @@ button.inline-flex {
     min-height: 44px;
 }
 
+/* ============================================================
+   Related Blog 
+   ============================================================ */
+#related-blog-posts .grid > article:first-child {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -12px rgba(15,23,42,0.2);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    min-height: 18rem;
+}
+
+#related-blog-posts .grid > article:first-child:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -30px rgba(15,23,42,0.28);
+}
+
+#related-blog-posts .grid > article:first-child .p-6,
+#related-blog-posts .grid > article:first-child .p-10 {
+    mix-blend-mode: normal;
+}
+
+#related-blog-posts aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#related-blog-posts aside article {
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+#related-blog-posts aside article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -14px rgba(15,23,42,0.12);
+}
+
+#related-blog-posts [data-blog-card][data-active="true"] {
+    box-shadow: 0 0 0 2px rgba(225, 1, 1, 0.14), 0 16px 40px -24px rgba(15, 23, 42, 0.25);
+    transform: translateY(-2px) scale(1.01);
+}
+
+#related-blog-posts [data-blog-featured-card="true"] {
+    transform-origin: center;
+}
+
+#related-blog-posts .blog-swap-enter {
+    animation: blogSwapEnter 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#related-blog-posts .blog-swap-exit {
+    animation: blogSwapExit 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes blogSwapEnter {
+    0% {
+        opacity: 0;
+        transform: scale(0.97) translateY(12px);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes blogSwapExit {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0.25;
+        transform: scale(0.985) translateY(-8px);
+    }
+}
+
+@media (min-width: 1024px) {
+    #related-blog-posts .grid > article:first-child { min-height: 20rem; }
+}
+
+
 /* ------ Consistent section padding on mobile ------ */
 @media (max-width: 640px) {
     #main-content {
@@ -424,78 +586,6 @@ button.inline-flex {
     border-radius: 4px;
 }
 
-/* ============================================================
-   HAMBURGER ICON — ANIMATED (bars → X)
-   ============================================================ */
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 18px;
-    height: 13px;
-    flex-shrink: 0;
-}
-
-.hamburger-line {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    border-radius: 2px;
-    transition: transform 0.28s ease, opacity 0.2s ease;
-    transform-origin: center;
-}
-
-/* Animate to X when open */
-.hamburger.is-open .hamburger-line:nth-child(1) {
-    transform: translateY(5.5px) rotate(45deg);
-}
-
-.hamburger.is-open .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-}
-
-.hamburger.is-open .hamburger-line:nth-child(3) {
-    transform: translateY(-5.5px) rotate(-45deg);
-}
-
-/* ============================================================
-   MOBILE DRAWER — SMOOTH SLIDE ANIMATION
-   ============================================================ */
-
-/* Always in the DOM — visibility controlled by class, not display */
-#mobile-drawer {
-    display: block !important;
-    pointer-events: none;
-    visibility: hidden;
-    transition: visibility 0s linear 0.3s;
-}
-
-#mobile-overlay {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.drawer-panel {
-    transform: translateX(100%);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Open state */
-#mobile-drawer.drawer-open {
-    pointer-events: all;
-    visibility: visible;
-    transition: visibility 0s linear 0s;
-}
-
-#mobile-drawer.drawer-open #mobile-overlay {
-    opacity: 1;
-}
-
-#mobile-drawer.drawer-open .drawer-panel {
-    transform: translateX(0);
-}
 
 /* ============================================================
    CARD STACKING — GUARANTEE SINGLE COLUMN BELOW 768px
