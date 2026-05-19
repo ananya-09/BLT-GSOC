@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="OWASP BLT Project Ideas and selected GSoC 2026 projects with links and contributors.">
+	<meta name="keywords" content="OWASP BLT, Project Ideas, GSoC 2026, Projects">
+
+	<title>Project Ideas | OWASP BLT</title>
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+		tailwind.config = {
+			darkMode: 'class',
+			theme: {
+				extend: {
+					colors: {
+						brand: '#E10101',
+						'neutral-border': '#E5E5E5',
+						'dark-base': '#111827',
+						'dark-surface': '#1F2937'
+					},
+					fontFamily: {
+						sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif']
+					},
+					boxShadow: {
+						soft: '0 10px 24px -16px rgba(17, 24, 39, 0.35)'
+					}
+				}
+			}
+		};
+	</script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+		@media (max-width: 1023px) {
+			#desktop-nav { display: none !important; }
+		}
+		@media (min-width: 1024px) {
+			#desktop-nav { display: flex !important; }
+			#mobile-nav-toggle, #mobile-nav { display: none !important; }
+		}
+
+		.project-summary { position: relative; }
+		.project-description { overflow: hidden; max-height: 6.6rem; transition: max-height 220ms ease; }
+		.project-summary.is-expanded .project-description { max-height: 100rem; }
+		.project-description-toggle { display:inline-flex; align-items:center; gap:0.35rem; margin-top:0.5rem; border:0; background:transparent; padding:0; font-size:0.75rem; font-weight:800; color:#E10101; }
+		.project-description-toggle:hover { text-decoration: underline; }
+		.project-summary.is-expanded .project-description-toggle .more-label { display:none; }
+		.project-summary:not(.is-expanded) .project-description-toggle .less-label { display:none; }
+	</style>
+</head>
+
+<body class="bg-white font-sans text-gray-900 antialiased transition-colors duration-200 dark:bg-dark-base dark:text-gray-100">
+
+	<!-- Header -->
+	<header class="sticky top-0 z-50 border-b border-neutral-border backdrop-blur-lg bg-white/50 transition-colors duration-200 dark:border-gray-800 dark:bg-dark-surface/50 shadow-md">
+		<div class="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+			<a href="./" class="flex items-center gap-3" aria-label="OWASP BLT GSoC Home">
+				<img src="./images/logo.png" alt="OWASP BLT Logo" class="h-8 w-8">
+				<div>
+					<p class="text-sm font-extrabold leading-none">OWASP BLT</p>
+					<p class="text-xs font-semibold text-gray-500">Google Summer of Code 2026</p>
+				</div>
+			</a>
+
+			<nav id="desktop-nav" class="hidden flex-wrap items-center gap-4 lg:flex" aria-label="Main GSoC navigation">
+				<a href="./" class="text-xs sm:text-xs lg:text-sm font-bold text-gray-700 transition hover:text-brand hover:underline">Home</a>
+				<a href="gsoc2026.html" class="text-xs sm:text-xs lg:text-sm font-bold text-gray-700 transition hover:text-brand hover:underline">GSoC 2026</a>
+				<a href="intern2026.html" class="text-xs sm:text-xs lg:text-sm font-bold text-gray-700 transition hover:text-brand hover:underline">Intern 2026</a>
+				<a href="project-ideas.html" class="text-xs sm:text-xs lg:text-sm font-extrabold text-brand hover:underline" aria-current="page">Project Ideas</a>
+				<a href="mentor-guide.html" class="text-xs sm:text-xs lg:text-sm font-bold text-gray-700 transition hover:text-brand hover:underline">Mentor Guide</a>
+				<a href="community.html" class="text-xs sm:text-xs lg:text-sm font-bold text-gray-700 transition hover:text-brand hover:underline">Community</a>
+				<a href="pr-report.html" class="text-xs sm:text-xs lg:text-sm font-bold text-gray-700 transition hover:text-brand hover:underline">PR Analytics</a>
+			</nav>
+
+			<div class="flex items-center gap-2">
+				<button id="mobile-nav-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/60 bg-white/60 text-gray-700 shadow-sm backdrop-blur-md transition hover:bg-white/90 dark:border-gray-700 dark:bg-gray-900/50 dark:text-gray-300 dark:hover:bg-gray-800/80 lg:hidden" aria-label="Toggle navigation menu" aria-controls="mobile-nav" aria-expanded="false">
+					<i class="fa-solid fa-bars" aria-hidden="true"></i>
+				</button>
+				<button id="theme-toggle" type="button" class="theme-toggle-btn inline-flex h-10 w-10 items-center justify-center rounded-md border border-neutral-border text-gray-700 transition hover:bg-gray-100 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800" aria-label="Toggle dark mode">
+					<i class="fa-solid fa-moon dark:hidden" aria-hidden="true"></i>
+					<i class="fa-solid fa-sun hidden dark:block" aria-hidden="true"></i>
+				</button>
+				<a href="https://github.com/OWASP-BLT/BLT-GSOC" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center justify-center rounded-md border border-[#E10101] px-3 py-1.5 text-xs font-semibold text-[#E10101] transition hover:bg-[#E10101] hover:text-white" aria-label="Github repo">
+					<i class="fa-brands fa-github mr-1.5" aria-hidden="true"></i>GitHub
+				</a>
+			</div>
+		</div>
+
+		<div id="mobile-nav" class="hidden border-t border-neutral-border bg-white/90 px-4 py-3 backdrop-blur-lg transition-colors duration-200 dark:border-gray-800 dark:bg-dark-surface/90 lg:hidden">
+			<nav class="mx-auto flex max-w-7xl flex-col gap-2" aria-label="Mobile GSoC navigation">
+				<a href="./" class="rounded-md px-3 py-2 text-sm font-bold text-gray-700 transition hover:bg-gray-100 hover:text-brand dark:text-gray-300 dark:hover:bg-gray-800">Home</a>
+				<a href="gsoc2026.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-700 transition hover:bg-gray-100 hover:text-brand dark:text-gray-300 dark:hover:bg-gray-800">GSoC 2026</a>
+				<a href="intern2026.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-700 transition hover:bg-gray-100 hover:text-brand dark:text-gray-300 dark:hover:bg-gray-800">Intern 2026</a>
+				<a href="project-ideas.html" class="rounded-md px-3 py-2 text-sm font-extrabold text-brand dark:text-white">Project Ideas</a>
+				<a href="mentor-guide.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-700 transition hover:bg-gray-100 hover:text-brand dark:text-gray-300 dark:hover:bg-gray-800">Mentor Guide</a>
+				<a href="community.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-700 transition hover:bg-gray-100 hover:text-brand dark:text-gray-300 dark:hover:bg-gray-800">Community</a>
+				<a href="pr-report.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-700 transition hover:bg-gray-100 hover:text-brand dark:text-gray-300 dark:hover:bg-gray-800">PR Analytics</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main-content" class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+
+		<!-- Project Ideas Hero -->
+		<section id="project-ideas-hero" class="rounded-[2rem] border border-neutral-border bg-gradient-to-br from-white via-red-50/60 to-white p-6 shadow-soft dark:border-gray-800 dark:from-dark-surface dark:via-dark-base dark:to-dark-surface lg:p-8">
+			<div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+				<div>
+					<h1 class="text-3xl font-extrabold text-gray-900 dark:text-white">Project Ideas</h1>
+					<p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Explore OWASP BLT project groupings, proposal specs, dependencies, and contributor signals. Below are featured project links and the GSoC 2026 selected projects with contributors and repository links.</p>
+					<div class="mt-6 flex flex-wrap gap-3">
+						<a href="https://github.owaspblt.org/BLT-Ideas/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md bg-[#E10101] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700">Browse Featured Projects</a>
+						<a href="https://owasp.org/www-community/initiatives/gsoc/gsoc2026ideas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md border border-neutral-border bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-brand hover:text-brand">2026 Project Ideas</a>
+					</div>
+				</div>
+				<div class="overflow-hidden rounded-2xl border border-white/70 bg-white shadow-soft dark:border-gray-700 dark:bg-dark-base">
+					<a href="https://github.owaspblt.org/BLT-Ideas/" target="_blank" rel="noopener noreferrer" class="block">
+						<img src="images/blt-project-ideas.png" alt="BLT Ideas portal preview" class="h-full w-full object-cover transition duration-300 hover:scale-[1.01]">
+					</a>
+					<div class="border-t border-neutral-border bg-white px-4 py-3 text-xs font-semibold text-gray-600 dark:border-gray-700 dark:bg-dark-surface dark:text-gray-300">
+						BLT Ideas Page
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quick Links -->
+		<section class="mt-8 grid gap-6 lg:grid-cols-3">
+			<a href="https://github.owaspblt.org/BLT-Ideas/" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-red-200 bg-white p-4 text-sm font-semibold text-gray-800 text-center transition hover:bg-red-50 hover:text-brand dark:bg-dark-base dark:text-white">BLT Ideas Portal</a>
+			<a href="https://owasp.org/www-community/initiatives/gsoc/gsoc2026ideas" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-red-200 bg-white p-4 text-sm font-semibold text-gray-800 text-center transition hover:bg-red-50 hover:text-brand dark:bg-dark-base dark:text-white">GSoC 2026 Ideas (OWASP)</a>
+			<a href="https://owasp.org/www-community/initiatives/gsoc/gsoc_sat" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-red-200 bg-white p-4 text-sm font-semibold text-gray-800 text-center transition hover:bg-red-50 hover:text-brand dark:bg-dark-base dark:text-white">Student Application Template (SAT)</a>
+		</section>
+
+		<!-- Selected GSoC 2026 Projects -->
+		<section id="selected-gsoc-2026" class="mt-10">
+			<div class="mb-6 flex items-center gap-3">
+				<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-white text-sm"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+				<div>
+					<h2 class="text-2xl font-extrabold text-gray-900 dark:text-white">Selected GSoC 2026 Projects</h2>
+					<p class="text-sm text-gray-500 dark:text-gray-400">Four accepted GSoC 2026 projects with contributors, mentors, and repo links.</p>
+				</div>
+			</div>
+
+			<div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-2">
+
+				<!-- BLT-Vanish -->
+				<article class="rounded-2xl border border-neutral-border bg-white p-5 shadow-soft dark:border-gray-800 dark:bg-dark-surface" data-project-id="blt-vanish">
+					<div class="mb-3">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-user mr-1 text-brand" aria-hidden="true"></i>Contributor</p>
+						<div class="flex flex-wrap gap-2">
+							<div class="person-row">
+								<img src="https://github.com/ananya-09.png?size=80" alt="Ananya GitHub avatar" class="person-avatar" loading="lazy" decoding="async">
+								<div class="min-w-0">
+									<p class="person-name">Ananya</p>
+									<a href="https://github.com/ananya-09" target="_blank" rel="noopener noreferrer" class="person-github"><i class="fa-brands fa-github" aria-hidden="true"></i> ananya-09</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-4 flex items-start justify-between gap-2">
+						<h3 class="text-base font-extrabold leading-snug text-gray-900 dark:text-white">BLT-Vanish</h3>
+						<p class="card-tagline text-xs font-semibold text-gray-500 dark:text-gray-400">Universal Identity Shield for real-time personal cybersecurity defense.</p>
+					</div>
+
+					<div class="mb-4 mt-4">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-link mr-1 text-brand" aria-hidden="true"></i>Project Links</p>
+						<div class="flex flex-wrap gap-2">
+							<a href="https://github.com/OWASP-BLT/BLT-Vanish-Web" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-brands fa-github text-brand"></i>Web Repo</a>
+							<a href="https://github.com/OWASP-BLT/BLT-Vanish-Flutter" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-brands fa-github text-brand"></i>Flutter Repo</a>
+							<a href="http://github.owaspblt.org/BLT-Vanish-Web/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-solid fa-globe text-brand"></i>github.owaspblt.org/BLT-Vanish-Web</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- BLT-NetGuardian -->
+				<article class="rounded-2xl border border-neutral-border bg-white p-5 shadow-soft dark:border-gray-800 dark:bg-dark-surface" data-project-id="blt-netguardian">
+					<div class="mb-3">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-user mr-1 text-brand" aria-hidden="true"></i>Contributor</p>
+						<div class="flex flex-wrap gap-2">
+							<div class="person-row">
+								<img src="https://github.com/Pritz395.png?size=80" alt="Preetham Poojari GitHub avatar" class="person-avatar" loading="lazy" decoding="async">
+								<div class="min-w-0">
+									<p class="person-name">Preetham Poojari</p>
+									<a href="https://github.com/Pritz395" target="_blank" rel="noopener noreferrer" class="person-github"><i class="fa-brands fa-github" aria-hidden="true"></i> Pritz395</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-4 flex items-start justify-between gap-2">
+						<h3 class="text-base font-extrabold leading-snug text-gray-900 dark:text-white">BLT-NetGuardian</h3>
+						<p class="card-tagline text-xs font-semibold text-gray-500 dark:text-gray-400">Zero-trust ingestion and CVE-aware triage for security findings.</p>
+					</div>
+
+					<div class="mb-4 mt-4">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-link mr-1 text-brand" aria-hidden="true"></i>Project Links</p>
+						<div class="flex flex-wrap gap-2">
+							<a href="https://github.com/OWASP-BLT/BLT-NetGuardian-Client" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-brands fa-github text-brand"></i>Client Repo</a>
+							<a href="https://github.com/OWASP-BLT/BLT-NetGuardian" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-brands fa-github text-brand"></i>Core Repo</a>
+							<a href="https://netguardian.owaspblt.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-solid fa-globe text-brand"></i>netguardian.owaspblt.org</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- BLT-University -->
+				<article class="rounded-2xl border border-neutral-border bg-white p-5 shadow-soft dark:border-gray-800 dark:bg-dark-surface" data-project-id="blt-university">
+					<div class="mb-3">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-user mr-1 text-brand" aria-hidden="true"></i>Contributor</p>
+						<div class="flex flex-wrap gap-2">
+							<div class="person-row">
+								<img src="https://github.com/e-esakman.png?size=80" alt="Sakshee Suman GitHub avatar" class="person-avatar" loading="lazy" decoding="async">
+								<div class="min-w-0">
+									<p class="person-name">Sakshee Suman</p>
+									<a href="https://github.com/e-esakman" target="_blank" rel="noopener noreferrer" class="person-github"><i class="fa-brands fa-github" aria-hidden="true"></i> e-esakman</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-4 flex items-start justify-between gap-2">
+						<h3 class="text-base font-extrabold leading-snug text-gray-900 dark:text-white">BLT-University</h3>
+						<p class="card-tagline text-xs font-semibold text-gray-500 dark:text-gray-400">Interactive security labs with real vulnerability insights.</p>
+					</div>
+
+					<div class="mb-4 mt-4">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-link mr-1 text-brand" aria-hidden="true"></i>Project Links</p>
+						<div class="flex flex-wrap gap-2">
+							<a href="https://github.com/OWASP-BLT/BLT-University" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-brands fa-github text-brand"></i>Repo</a>
+							<a href="https://university.owaspblt.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-solid fa-globe text-brand"></i>university.owaspblt.org</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- BLT-Next -->
+				<article class="rounded-2xl border border-neutral-border bg-white p-5 shadow-soft dark:border-gray-800 dark:bg-dark-surface" data-project-id="blt-next">
+					<div class="mb-3">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-user mr-1 text-brand" aria-hidden="true"></i>Contributor</p>
+						<div class="flex flex-wrap gap-2">
+							<div class="person-row">
+								<img src="https://github.com/mdkaifansari04.png?size=80" alt="Md Kaif Ansari GitHub avatar" class="person-avatar" loading="lazy" decoding="async">
+								<div class="min-w-0">
+									<p class="person-name">Md Kaif Ansari</p>
+									<a href="https://github.com/mdkaifansari04" target="_blank" rel="noopener noreferrer" class="person-github"><i class="fa-brands fa-github" aria-hidden="true"></i> mdkaifansari04</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-4 flex items-start justify-between gap-2">
+						<h3 class="text-base font-extrabold leading-snug text-gray-900 dark:text-white">BLT-Next</h3>
+						<p class="card-tagline text-xs font-semibold text-gray-500 dark:text-gray-400">Modular edge-first migration from Django monolith to static + Workers.</p>
+					</div>
+
+					<div class="mb-4 mt-4">
+						<p class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-link mr-1 text-brand" aria-hidden="true"></i>Project Links</p>
+						<div class="flex flex-wrap gap-2">
+							<a href="https://github.com/OWASP-BLT/BLT-Next" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-brands fa-github text-brand"></i>Repo</a>
+							<a href="https://next.owaspblt.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-border bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"><i class="fa-solid fa-globe text-brand"></i>next.owaspblt.org</a>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</section>
+
+		<div class="mt-8">
+			<a href="./" class="inline-flex items-center justify-center rounded-md border border-[#E10101] px-5 py-2.5 text-sm font-semibold text-[#E10101] transition hover:bg-[#E10101] hover:text-white"><i class="fa-solid fa-arrow-left mr-2" aria-hidden="true"></i>Back to Home</a>
+		</div>
+
+	</main>
+
+	<!-- Footer -->
+	<footer class="border-t border-neutral-border bg-white transition-colors duration-200 dark:border-gray-800 dark:bg-dark-surface">
+		<div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-4 py-6 sm:px-6 lg:flex-row lg:items-center lg:px-8">
+			<p class="text-sm text-gray-600 dark:text-gray-400">© <span id="year"></span> OWASP BLT GSoC. Built for contributors and mentors.</p>
+			<div class="flex flex-wrap items-center gap-4 text-sm">
+				<a href="https://github.com/OWASP-BLT/BLT-GSOC" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:underline">BLT-GSOC Repo</a>
+				<a href="https://owasp.org/" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:underline">OWASP</a>
+				<a href="pr-report.html" class="text-red-600 hover:underline">PR Analytics</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/theme.js"></script>
+	<script>
+		const yearNode = document.getElementById('year'); if (yearNode) yearNode.textContent = new Date().getFullYear();
+
+		document.querySelectorAll('.project-summary').forEach((summary) => {
+			const button = summary.querySelector('.project-description-toggle');
+			if (!button) return;
+			button.addEventListener('click', () => {
+				const expanded = summary.classList.toggle('is-expanded');
+				button.setAttribute('aria-expanded', String(expanded));
+			});
+		});
+
+		const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+		const mobileNav = document.getElementById('mobile-nav');
+		if (mobileNavToggle && mobileNav) {
+			mobileNavToggle.addEventListener('click', () => {
+				const isOpen = mobileNav.classList.toggle('hidden') === false;
+				mobileNavToggle.setAttribute('aria-expanded', String(isOpen));
+				mobileNavToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>' : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+			});
+		}
+	</script>
+</body>
+
+</html>
