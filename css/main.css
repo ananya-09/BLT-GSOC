@@ -137,7 +137,6 @@ a {
 #gsoc-student-cards > article .card-tagline,
 #intern-cards > article .card-tagline {
     overflow-wrap: anywhere;
-    word-break: break-word;
 }
 
 .card-tagline {
@@ -427,7 +426,6 @@ a {
 #intern-cards code {
     white-space: normal !important;
     overflow-wrap: anywhere !important;
-    word-break: break-word !important;
     max-width: 100%;
 }
 
