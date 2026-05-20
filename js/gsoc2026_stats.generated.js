@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-20T03:29:53.933Z",
+    "updatedAt": "2026-05-20T06:19:11.206Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -62,10 +62,10 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Vanish-Flutter"
             ],
             "repoStats": {
-                "openPR": 2,
-                "mergedPR": 6,
-                "openIssues": 1,
-                "closedIssues": 3,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": 26
             },
             "userStats": {
@@ -88,7 +88,7 @@ window.GSOC2026_STATS = {
             },
             "userStats": {
                 "S3DFX-CYBER": {
-                    "prTotal": 2,
+                    "prTotal": null,
                     "closedIssues": null
                 }
             }
