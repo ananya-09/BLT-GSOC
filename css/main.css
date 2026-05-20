@@ -530,14 +530,14 @@ button.inline-flex {
 }
 
 #related-blog-posts .blog-swap-enter {
-    animation: blogSwapEnter 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation: blog-swap-enter 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 #related-blog-posts .blog-swap-exit {
-    animation: blogSwapExit 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation: blog-swap-exit 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-@keyframes blogSwapEnter {
+@keyframes blog-swap-enter {
     0% {
         opacity: 0;
         transform: scale(0.97) translateY(12px);
@@ -550,7 +550,7 @@ button.inline-flex {
     }
 }
 
-@keyframes blogSwapExit {
+@keyframes blog-swap-exit {
     0% {
         opacity: 1;
         transform: scale(1) translateY(0);
