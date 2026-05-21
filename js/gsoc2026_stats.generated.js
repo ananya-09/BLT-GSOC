@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-20T03:29:53.933Z",
+    "updatedAt": "2026-05-21T03:29:53.955Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -62,16 +62,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Vanish-Flutter"
             ],
             "repoStats": {
-                "openPR": 2,
-                "mergedPR": 6,
-                "openIssues": 1,
-                "closedIssues": 3,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": 26
             },
             "userStats": {
                 "ananya-09": {
-                    "prTotal": 0,
-                    "closedIssues": 0
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
@@ -89,7 +89,7 @@ window.GSOC2026_STATS = {
             "userStats": {
                 "S3DFX-CYBER": {
                     "prTotal": 2,
-                    "closedIssues": null
+                    "closedIssues": 0
                 }
             }
         },
@@ -98,16 +98,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Toasty"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
-                "totalCommits": 45
+                "openPR": 8,
+                "mergedPR": 10,
+                "openIssues": 11,
+                "closedIssues": 3,
+                "totalCommits": 49
             },
             "userStats": {
                 "ojaswa072": {
-                    "prTotal": null,
-                    "closedIssues": null
+                    "prTotal": 3,
+                    "closedIssues": 1
                 }
             }
         },
@@ -116,16 +116,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-MCP"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
+                "openPR": 15,
+                "mergedPR": 9,
+                "openIssues": 6,
+                "closedIssues": 1,
                 "totalCommits": 29
             },
             "userStats": {
                 "Nachiket-Roy": {
-                    "prTotal": null,
-                    "closedIssues": null
+                    "prTotal": 2,
+                    "closedIssues": 0
                 }
             }
         },
