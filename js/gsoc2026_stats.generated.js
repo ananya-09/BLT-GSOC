@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-21T03:29:53.955Z",
+    "updatedAt": "2026-05-22T03:29:54.841Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -82,7 +82,7 @@ window.GSOC2026_STATS = {
             "repoStats": {
                 "openPR": 5,
                 "mergedPR": 7,
-                "openIssues": 4,
+                "openIssues": 5,
                 "closedIssues": 3,
                 "totalCommits": 25
             },
@@ -116,16 +116,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-MCP"
             ],
             "repoStats": {
-                "openPR": 15,
-                "mergedPR": 9,
-                "openIssues": 6,
-                "closedIssues": 1,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": 29
             },
             "userStats": {
                 "Nachiket-Roy": {
-                    "prTotal": 2,
-                    "closedIssues": 0
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
