@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-23T03:29:06.328Z",
+    "updatedAt": "2026-05-24T03:29:50.080Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -25,11 +25,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-University"
             ],
             "repoStats": {
-                "openPR": 6,
-                "mergedPR": 20,
+                "openPR": 1,
+                "mergedPR": 23,
                 "openIssues": 3,
                 "closedIssues": 12,
-                "totalCommits": 86
+                "totalCommits": 96
             },
             "userStats": {
                 "e-esakman": {
@@ -43,11 +43,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 34,
-                "mergedPR": 35,
-                "openIssues": 40,
-                "closedIssues": 28,
-                "totalCommits": 138
+                "openPR": 5,
+                "mergedPR": 43,
+                "openIssues": 32,
+                "closedIssues": 36,
+                "totalCommits": 155
             },
             "userStats": {
                 "mdkaifansari04": {
@@ -80,7 +80,7 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Preflight"
             ],
             "repoStats": {
-                "openPR": 5,
+                "openPR": 6,
                 "mergedPR": 7,
                 "openIssues": 5,
                 "closedIssues": 3,
@@ -88,7 +88,7 @@ window.GSOC2026_STATS = {
             },
             "userStats": {
                 "S3DFX-CYBER": {
-                    "prTotal": 2,
+                    "prTotal": 3,
                     "closedIssues": 0
                 }
             }
@@ -116,7 +116,7 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-MCP"
             ],
             "repoStats": {
-                "openPR": 15,
+                "openPR": 10,
                 "mergedPR": 9,
                 "openIssues": 6,
                 "closedIssues": 1,
@@ -134,15 +134,15 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Safecloak"
             ],
             "repoStats": {
-                "openPR": 39,
+                "openPR": 40,
                 "mergedPR": 50,
-                "openIssues": 12,
-                "closedIssues": 19,
+                "openIssues": 11,
+                "closedIssues": 20,
                 "totalCommits": 232
             },
             "userStats": {
                 "karunarapolu": {
-                    "prTotal": 1,
+                    "prTotal": null,
                     "closedIssues": null
                 }
             }
