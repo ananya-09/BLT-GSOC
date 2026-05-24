@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-23T05:47:59.421Z",
+    "updatedAt": "2026-05-24T03:29:50.080Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -25,11 +25,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-University"
             ],
             "repoStats": {
-                "openPR": 6,
-                "mergedPR": 20,
+                "openPR": 1,
+                "mergedPR": 23,
                 "openIssues": 3,
                 "closedIssues": 12,
-                "totalCommits": 86
+                "totalCommits": 96
             },
             "userStats": {
                 "e-esakman": {
@@ -43,11 +43,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 34,
-                "mergedPR": 35,
-                "openIssues": 40,
-                "closedIssues": 28,
-                "totalCommits": 138
+                "openPR": 5,
+                "mergedPR": 43,
+                "openIssues": 32,
+                "closedIssues": 36,
+                "totalCommits": 155
             },
             "userStats": {
                 "mdkaifansari04": {
@@ -80,16 +80,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Preflight"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
+                "openPR": 6,
+                "mergedPR": 7,
+                "openIssues": 5,
+                "closedIssues": 3,
                 "totalCommits": 25
             },
             "userStats": {
                 "S3DFX-CYBER": {
-                    "prTotal": null,
-                    "closedIssues": null
+                    "prTotal": 3,
+                    "closedIssues": 0
                 }
             }
         },
@@ -98,16 +98,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Toasty"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
+                "openPR": 8,
+                "mergedPR": 10,
+                "openIssues": 11,
+                "closedIssues": 3,
                 "totalCommits": 49
             },
             "userStats": {
                 "ojaswa072": {
-                    "prTotal": null,
-                    "closedIssues": null
+                    "prTotal": 3,
+                    "closedIssues": 1
                 }
             }
         },
@@ -116,16 +116,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-MCP"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
+                "openPR": 10,
+                "mergedPR": 9,
+                "openIssues": 6,
+                "closedIssues": 1,
                 "totalCommits": 29
             },
             "userStats": {
                 "Nachiket-Roy": {
-                    "prTotal": null,
-                    "closedIssues": null
+                    "prTotal": 2,
+                    "closedIssues": 0
                 }
             }
         },
@@ -134,10 +134,10 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Safecloak"
             ],
             "repoStats": {
-                "openPR": null,
-                "mergedPR": null,
-                "openIssues": null,
-                "closedIssues": null,
+                "openPR": 40,
+                "mergedPR": 50,
+                "openIssues": 11,
+                "closedIssues": 20,
                 "totalCommits": 232
             },
             "userStats": {
