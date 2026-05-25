@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-24T06:11:25.575Z",
+    "updatedAt": "2026-05-25T06:47:14.595Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -7,11 +7,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-NetGuardian"
             ],
             "repoStats": {
-                "openPR": 12,
-                "mergedPR": 17,
+                "openPR": 7,
+                "mergedPR": 19,
                 "openIssues": 0,
                 "closedIssues": 3,
-                "totalCommits": 82
+                "totalCommits": 96
             },
             "userStats": {
                 "Pritz395": {
@@ -27,7 +27,7 @@ window.GSOC2026_STATS = {
             "repoStats": {
                 "openPR": 1,
                 "mergedPR": 23,
-                "openIssues": 3,
+                "openIssues": 16,
                 "closedIssues": 12,
                 "totalCommits": 96
             },
@@ -43,11 +43,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 5,
-                "mergedPR": 43,
-                "openIssues": 32,
-                "closedIssues": 36,
-                "totalCommits": 155
+                "openPR": 6,
+                "mergedPR": 48,
+                "openIssues": 31,
+                "closedIssues": 38,
+                "totalCommits": 167
             },
             "userStats": {
                 "mdkaifansari04": {
@@ -138,7 +138,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 232
+                "totalCommits": 284
             },
             "userStats": {
                 "karunarapolu": {
