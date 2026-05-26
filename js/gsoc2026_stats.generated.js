@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-25T06:47:14.595Z",
+    "updatedAt": "2026-05-26T06:17:46.640Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -26,15 +26,15 @@ window.GSOC2026_STATS = {
             ],
             "repoStats": {
                 "openPR": 1,
-                "mergedPR": 23,
-                "openIssues": 16,
-                "closedIssues": 12,
-                "totalCommits": 96
+                "mergedPR": 25,
+                "openIssues": 15,
+                "closedIssues": 13,
+                "totalCommits": 106
             },
             "userStats": {
                 "e-esakman": {
-                    "prTotal": 2,
-                    "closedIssues": 3
+                    "prTotal": 4,
+                    "closedIssues": 4
                 }
             }
         },
@@ -43,9 +43,9 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 6,
+                "openPR": 7,
                 "mergedPR": 48,
-                "openIssues": 31,
+                "openIssues": 32,
                 "closedIssues": 38,
                 "totalCommits": 167
             },
@@ -84,7 +84,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 25
+                "totalCommits": 30
             },
             "userStats": {
                 "S3DFX-CYBER": {
@@ -138,7 +138,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 284
+                "totalCommits": 289
             },
             "userStats": {
                 "karunarapolu": {
