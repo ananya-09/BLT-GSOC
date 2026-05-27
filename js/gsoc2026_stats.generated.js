@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-26T06:17:46.640Z",
+    "updatedAt": "2026-05-27T06:40:36.643Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -7,11 +7,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-NetGuardian"
             ],
             "repoStats": {
-                "openPR": 7,
-                "mergedPR": 19,
+                "openPR": 5,
+                "mergedPR": 13,
                 "openIssues": 0,
                 "closedIssues": 3,
-                "totalCommits": 96
+                "totalCommits": null
             },
             "userStats": {
                 "Pritz395": {
@@ -25,15 +25,15 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-University"
             ],
             "repoStats": {
-                "openPR": 1,
-                "mergedPR": 25,
+                "openPR": 0,
+                "mergedPR": 18,
                 "openIssues": 15,
                 "closedIssues": 13,
-                "totalCommits": 106
+                "totalCommits": null
             },
             "userStats": {
                 "e-esakman": {
-                    "prTotal": 4,
+                    "prTotal": 0,
                     "closedIssues": 4
                 }
             }
@@ -43,11 +43,11 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 7,
-                "mergedPR": 48,
+                "openPR": 1,
+                "mergedPR": 37,
                 "openIssues": 32,
                 "closedIssues": 38,
-                "totalCommits": 167
+                "totalCommits": null
             },
             "userStats": {
                 "mdkaifansari04": {
@@ -66,7 +66,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 29
+                "totalCommits": null
             },
             "userStats": {
                 "ananya-09": {
@@ -84,7 +84,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 30
+                "totalCommits": null
             },
             "userStats": {
                 "S3DFX-CYBER": {
@@ -102,7 +102,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 49
+                "totalCommits": null
             },
             "userStats": {
                 "ojaswa072": {
@@ -120,7 +120,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 56
+                "totalCommits": null
             },
             "userStats": {
                 "Nachiket-Roy": {
@@ -138,7 +138,7 @@ window.GSOC2026_STATS = {
                 "mergedPR": null,
                 "openIssues": null,
                 "closedIssues": null,
-                "totalCommits": 289
+                "totalCommits": null
             },
             "userStats": {
                 "karunarapolu": {
