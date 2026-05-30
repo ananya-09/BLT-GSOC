@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-29T06:33:25.731Z",
+    "updatedAt": "2026-05-30T05:55:55.799Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -7,8 +7,8 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-NetGuardian"
             ],
             "repoStats": {
-                "openPR": 1,
-                "mergedPR": 1,
+                "openPR": 0,
+                "mergedPR": 0,
                 "openIssues": 0,
                 "closedIssues": 3,
                 "totalCommits": null
@@ -44,7 +44,7 @@ window.GSOC2026_STATS = {
             ],
             "repoStats": {
                 "openPR": 0,
-                "mergedPR": 22,
+                "mergedPR": 19,
                 "openIssues": 32,
                 "closedIssues": 38,
                 "totalCommits": null
