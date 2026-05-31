@@ -1,5 +1,5 @@
 window.GSOC2026_STATS = {
-    "updatedAt": "2026-05-30T05:55:55.799Z",
+    "updatedAt": "2026-05-31T06:35:16.057Z",
     "projects": {
         "blt-netguardian": {
             "repos": [
@@ -7,16 +7,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-NetGuardian"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 0,
-                "openIssues": 0,
-                "closedIssues": 3,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": null
             },
             "userStats": {
                 "Pritz395": {
-                    "prTotal": 0,
-                    "closedIssues": 0
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
@@ -25,16 +25,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-University"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 0,
-                "openIssues": 15,
-                "closedIssues": 13,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": null
             },
             "userStats": {
                 "e-esakman": {
-                    "prTotal": 0,
-                    "closedIssues": 4
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
@@ -43,16 +43,16 @@ window.GSOC2026_STATS = {
                 "OWASP-BLT/BLT-Next"
             ],
             "repoStats": {
-                "openPR": 0,
-                "mergedPR": 19,
-                "openIssues": 32,
-                "closedIssues": 38,
+                "openPR": null,
+                "mergedPR": null,
+                "openIssues": null,
+                "closedIssues": null,
                 "totalCommits": null
             },
             "userStats": {
                 "mdkaifansari04": {
-                    "prTotal": 0,
-                    "closedIssues": 1
+                    "prTotal": null,
+                    "closedIssues": null
                 }
             }
         },
